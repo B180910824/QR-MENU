@@ -1,0 +1,32 @@
+:root {
+  --background: rgba(5, 17, 19, 1);
+  --collection-1-dark: rgba(29, 38, 43, 1);
+  --collection-1-dark-duplicate: rgba(29, 38, 43, 1);
+  --collection-1-grey2-duplicate: rgba(239, 239, 239, 1);
+  --grey-0: rgba(255, 255, 255, 1);
+  --roboto-12-14px-semibold-font-family: "Roboto", Helvetica;
+  --roboto-12-14px-semibold-font-size: 12px;
+  --roboto-12-14px-semibold-font-style: normal;
+  --roboto-12-14px-semibold-font-weight: 600;
+  --roboto-12-14px-semibold-letter-spacing: 0px;
+  --roboto-12-14px-semibold-line-height: 14px;
+  --roboto-14-16px-semibold-font-family: "Roboto", Helvetica;
+  --roboto-14-16px-semibold-font-size: 14px;
+  --roboto-14-16px-semibold-font-style: normal;
+  --roboto-14-16px-semibold-font-weight: 600;
+  --roboto-14-16px-semibold-letter-spacing: 0px;
+  --roboto-14-16px-semibold-line-height: 16px;
+  --roboto-20-24px-semibold-font-family: "Roboto", Helvetica;
+  --roboto-20-24px-semibold-font-size: 20px;
+  --roboto-20-24px-semibold-font-style: normal;
+  --roboto-20-24px-semibold-font-weight: 600;
+  --roboto-20-24px-semibold-letter-spacing: 0px;
+  --roboto-20-24px-semibold-line-height: 24px;
+  --tangerine: rgba(244, 140, 6, 1);
+  --variable-collection-dark-grey: rgba(27, 27, 32, 1);
+  --variable-collection-grey-2: rgba(95, 95, 99, 1);
+  --variable-collection-grey2: rgba(73, 73, 77, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-white-duplicate: rgba(255, 255, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+}

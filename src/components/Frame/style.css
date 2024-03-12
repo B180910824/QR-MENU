@@ -1,0 +1,102 @@
+.frame {
+  background-color: var(--collection-1-dark-duplicate);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.frame .div {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 136px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.frame .div-2 {
+  align-items: flex-start;
+  gap: 8px;
+  left: 10px;
+  position: absolute;
+}
+
+.frame .div-wrapper {
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 4px;
+  position: relative;
+}
+
+.frame .text-wrapper {
+  color: var(--white);
+  font-family: var(--roboto-14-16px-semibold-font-family);
+  font-size: var(--roboto-14-16px-semibold-font-size);
+  font-style: var(--roboto-14-16px-semibold-font-style);
+  font-weight: var(--roboto-14-16px-semibold-font-weight);
+  letter-spacing: var(--roboto-14-16px-semibold-letter-spacing);
+  line-height: var(--roboto-14-16px-semibold-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.frame .text-wrapper-2 {
+  color: var(--tangerine);
+  font-family: var(--roboto-12-14px-semibold-font-family);
+  font-size: var(--roboto-12-14px-semibold-font-size);
+  font-style: var(--roboto-12-14px-semibold-font-style);
+  font-weight: var(--roboto-12-14px-semibold-font-weight);
+  letter-spacing: var(--roboto-12-14px-semibold-letter-spacing);
+  line-height: var(--roboto-12-14px-semibold-line-height);
+  position: relative;
+  width: 120.8px;
+}
+
+.frame.default {
+  height: 206px;
+  width: 175px;
+}
+
+.frame.variant-2 {
+  height: 180px;
+  width: 171px;
+}
+
+.frame.default .div {
+  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-9@2x.png);
+  width: 175px;
+}
+
+.frame.variant-2 .div {
+  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-8@2x.png);
+  width: 171px;
+}
+
+.frame.default .div-2 {
+  display: inline-flex;
+  flex-direction: column;
+  top: 144px;
+}
+
+.frame.variant-2 .div-2 {
+  display: flex;
+  top: 146px;
+  width: 151px;
+}
+
+.frame.default .div-wrapper {
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+}
+
+.frame.variant-2 .div-wrapper {
+  display: inline-flex;
+}
+
+.frame.variant-2 .text-wrapper-2 {
+  margin-right: -56.8px;
+  margin-top: -1px;
+}

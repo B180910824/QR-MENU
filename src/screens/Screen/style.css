@@ -1,0 +1,171 @@
+.screen {
+  background-color: #000000
+  ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* style.css */
+
+
+
+
+
+.screen .div-3 {
+  background-color: var(--background);
+  height: auto; /* Adjust height to content or set a min-height if needed */
+  position: relative;
+  width: 100%; /* Use 100% for better responsiveness */
+  max-width: 390px; /* Max width to avoid stretching beyond desired width */
+}
+
+@media (max-width: 600px) {
+  .screen .div-3 {
+    width: 100%; /* Takes the full width of its parent */
+    height: auto; /* Adjust height automatically */
+    /* Consider adding more responsive adjustments here */
+  }
+}
+
+
+.screen .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 12px;
+  position: absolute;
+  top: 324px;
+}
+
+.screen .frame-3 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  position: relative;
+}
+
+.screen .frame-48355 {
+  align-items: center !important;
+}
+
+.screen .frame-4 {
+  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48361@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 260px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+}
+
+.screen .header-instance {
+  background-color: transparent !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 44px !important;
+}
+
+.screen .overlap-group {
+  height: 154px;
+  left: 0;
+  position: absolute;
+  top: 106px;
+  width: 390px;
+}
+
+.screen .group-2 {
+  height: 64px;
+  left: 20px;
+  position: relative;
+  top: 70px;
+  width: 305px;
+}
+
+.screen .text-wrapper-4 {
+  color: var(--white);
+  font-family: var(--roboto-20-24px-semibold-font-family);
+  font-size: 1.25rem;
+  font-style: var(--roboto-20-24px-semibold-font-style);
+  font-weight: var(--roboto-20-24px-semibold-font-weight);
+  left: 80px;
+  letter-spacing: var(--roboto-20-24px-semibold-letter-spacing);
+  line-height: var(--roboto-20-24px-semibold-line-height);
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.screen .tashuur-wrapper {
+  background-color: var(--collection-1-grey2-duplicate);
+  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48384.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 64px;
+  height: 64px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 64px;
+}
+
+.screen .tashuur {
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 64px;
+}
+
+.screen .frame-5 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 8px;
+  left: 12px;
+  position: absolute;
+  top: 276px;
+}
+
+.screen .frame-48342 {
+  flex: 0 0 auto !important;
+}
+
+.screen .frame-instance {
+  color: var(--variable-collection-white) !important;
+}
+
+.screen .frame-48342-instance {
+  background-color: #004195 !important;
+  flex: 0 0 auto !important;
+}
+
+.screen .design-component-instance-node {
+  background-color: #dfca23 ;
+  flex: 0 0 auto !important;
+}
+
+.screen .frame-6 {
+  background-color: #f96388 !important;
+  flex: 0 0 auto !important;
+}
+
+.screen .frame-7 {
+  background-color: #7fba4f !important;
+  flex: 0 0 auto !important;
+}
+/* hover effect */
+
+.frame-instance{
+  cursor: pointer;
+}
+.frame-48342{cursor: pointer}
