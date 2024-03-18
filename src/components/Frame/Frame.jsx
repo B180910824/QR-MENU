@@ -1,26 +1,28 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import PropTypes from "prop-types";
 import React from "react";
 import "./style.css";
 
-export const Frame = ({ property1, frameClassName }) => {
+// Modified Frame component to accept additional props for text and price
+export const Frame = ({ property1, frameClassName, text, price }) => {
   return (
     <div className={`frame ${property1}`}>
       <div className="div" />
       <div className={`div-2 ${frameClassName}`}>
         <div className="div-wrapper">
-          <div className="text-wrapper">Хуушуур 8ш</div>
+          {/* Use the text prop for dynamic content */}
+          <div className="text-wrapper">{text}</div>
         </div>
-        <div className="text-wrapper-2">20,000MNT</div>
+        {/* Use the price prop for dynamic content */}
+        <div className="text-wrapper-2">{price}</div>
       </div>
     </div>
   );
 };
 
+// Updated propTypes to include the new props
 Frame.propTypes = {
   property1: PropTypes.oneOf(["variant-2", "default"]),
+  frameClassName: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
 };
