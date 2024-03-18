@@ -3,6 +3,8 @@
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  margin: auto; /* This will center the frame if it's smaller than the container */
+
 }
 
 .frame .div {
@@ -11,6 +13,7 @@
   height: 136px;
   left: 0;
   position: absolute;
+  
   top: 0;
 }
 
@@ -56,22 +59,22 @@
 
 .frame.default {
   height: 206px;
-  width: 175px;
+  width: 170px;
 }
 
 .frame.variant-2 {
-  height: 180px;
-  width: 171px;
+  height: 170px;
+  width: 170px;
 }
 
 .frame.default .div {
   background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-9@2x.png);
-  width: 175px;
+  width: 170px;
 }
 
 .frame.variant-2 .div {
   background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-8@2x.png);
-  width: 171px;
+  width: 170px;
 }
 
 .frame.default .div-2 {
@@ -87,7 +90,7 @@
 }
 
 .frame.default .div-wrapper {
-  align-self: stretch;
+  align-self: center;
   display: flex;
   width: 100%;
 }

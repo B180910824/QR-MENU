@@ -21,7 +21,7 @@ npm run dev
 ```
 
 After a few seconds, your project should be accessible at the address
-[http://localhost:1234/](http://localhost:1234/)
+[http://192.168.0.106:1234/](http://192.168.0.106:1234/)
 
 
 If you are satisfied with the result, you can finally build the project for release with:
@@ -39,7 +39,7 @@ npm run storybook
 ```
 
 After a few seconds, your storybook should be accessible at the address
-[http://localhost:6006/](http://localhost:6006/)
+[http://192.168.0.106:6006/](http://192.168.0.106:6006/)
 
 You can build your storybook for release with:
 
