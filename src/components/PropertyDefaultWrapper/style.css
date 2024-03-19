@@ -7,6 +7,20 @@
   overflow: hidden;
   padding: 8px;
   position: relative;
+  background-color: tomato;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+
+}
+.property-default-wrapper:hover {
+  background-color: #0056b3; /* Darker blue on hover/focus */
+  text-decoration: none;
+}
+.property-default-wrapper:focus{
+  background-color: #3d0f35;
+
 }
 
 .property-default-wrapper .elsen-tasarkhai {
@@ -22,9 +36,6 @@
   width: fit-content;
 }
 
-.property-default-wrapper.property-1-4-default {
-  background-color: var(--tangerine);
-}
 
 .property-default-wrapper.property-1-4-variant-2 {
   background-color: var(--collection-1-dark-duplicate);

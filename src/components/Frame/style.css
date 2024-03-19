@@ -1,105 +1,75 @@
 .frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: var(--collection-1-dark-duplicate);
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  margin: auto; /* This will center the frame if it's smaller than the container */
-
+  height: 180px;
+  width: 170px;
+  margin: auto;
 }
 
 .frame .div {
   background-position: 50% 50%;
   background-size: cover;
   height: 136px;
-  left: 0;
-  position: absolute;
-  
-  top: 0;
+  width: 100%;
 }
 
 .frame .div-2 {
-  align-items: flex-start;
-  gap: 8px;
-  left: 10px;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 136px);
+  padding: 8px;
 }
 
-.frame .div-wrapper {
-  align-items: flex-start;
-  flex: 0 0 auto;
-  gap: 4px;
-  position: relative;
+.frame .text-wrapper, .frame .text-wrapper-2 {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 2px;
 }
 
+/* Responsive Font Sizing */
 .frame .text-wrapper {
+  /* Start from 13px and scale up to 15px, adjust as needed */
+  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  /* Other styles remain unchanged */
   color: var(--white);
   font-family: var(--roboto-14-16px-semibold-font-family);
-  font-size: var(--roboto-14-16px-semibold-font-size);
   font-style: var(--roboto-14-16px-semibold-font-style);
-  font-weight: var(--roboto-14-16px-semibold-font-weight);
+  font-weight:300;
   letter-spacing: var(--roboto-14-16px-semibold-letter-spacing);
   line-height: var(--roboto-14-16px-semibold-line-height);
   margin-top: -1px;
   position: relative;
   white-space: nowrap;
-  width: fit-content;
 }
 
 .frame .text-wrapper-2 {
+  /* Start from 11px and scale up to 13px, adjust as needed */
+  font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1600 - 300)));
+  /* Other styles remain unchanged */
   color: var(--tangerine);
   font-family: var(--roboto-12-14px-semibold-font-family);
-  font-size: var(--roboto-12-14px-semibold-font-size);
   font-style: var(--roboto-12-14px-semibold-font-style);
-  font-weight: var(--roboto-12-14px-semibold-font-weight);
+  font-weight: 200;
   letter-spacing: var(--roboto-12-14px-semibold-letter-spacing);
   line-height: var(--roboto-12-14px-semibold-line-height);
   position: relative;
   width: 120.8px;
 }
 
-.frame.default {
-  height: 206px;
-  width: 170px;
-}
-
-.frame.variant-2 {
-  height: 170px;
-  width: 170px;
-}
-
-.frame.default .div {
-  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-9@2x.png);
-  width: 170px;
-}
-
-.frame.variant-2 .div {
-  background-image: url(https://c.animaapp.com/kYIVtpEG/img/frame-48356-8@2x.png);
-  width: 170px;
-}
-
-.frame.default .div-2 {
-  display: inline-flex;
-  flex-direction: column;
-  top: 144px;
-}
-
-.frame.variant-2 .div-2 {
-  display: flex;
-  top: 146px;
-  width: 151px;
-}
-
-.frame.default .div-wrapper {
-  align-self: center;
-  display: flex;
-  width: 100%;
-}
-
-.frame.variant-2 .div-wrapper {
-  display: inline-flex;
-}
-
-.frame.variant-2 .text-wrapper-2 {
-  margin-right: -56.8px;
-  margin-top: -1px;
+/* Media Query for smaller screens remains the same */
+@media (max-width: 480px) {
+  .frame {
+    width: 100%;
+    max-width: 170px;
+  }
 }

@@ -8,11 +8,13 @@ import './style.css';
 
 export const Screen = () => {
   const [products, setProducts] = useState([]);
+  const [productCategory, setProductCategory] = useState('salat');
 
   useEffect(() => {
     const fetchProducts = async () => {
+      const url = `http://192.168.0.106:8000/api/product/${productCategory}`;
       try {
-        const response = await fetch('http://192.168.0.106:8000/api/product/khuushuur');
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -24,71 +26,93 @@ export const Screen = () => {
     };
 
     fetchProducts();
-  }, []);
-  const renderedFrames = products.map((product, index) => (
+  }, [productCategory]);
+
+  const handleCategorySelect = (category) => {
+    setProductCategory(category);
+  };
+
+  const renderedFrames = products.map((product) => (
     <div className={`frame-${product.productType} frame`} key={product._id}>
       <Frame
-        frameClassName={`frame-${product.productType}`} // Customize the class name based on your CSS
-        property1={product.productType === 'buuz' ? 'variant-2' : 'default'}
+        frameClassName="frame default" // Use a consistent class for all frames
+        property1="default" // Always pass "default" for a uniform design
         name={product.name}
         link={product.link}
         photo={product.photo}
       />
     </div>
   ));
-  
+
   return (
     <div className="screen">
       <div className="div-3">
+       <div className="category-selector">
+  <div onClick={() => handleCategorySelect('salat')} className={`category-option ${productCategory === 'salat' ? 'category-option-active' : ''}`}>Салат</div>
+  <div onClick={() => handleCategorySelect('food1')} className={`category-option ${productCategory === 'food1' ? 'category-option-active' : ''}`}>Шөл</div>
+  <div onClick={() => handleCategorySelect('food2')} className={`category-option ${productCategory === 'food2' ? 'category-option-active' : ''}`}>2р хоол</div>
+  <div onClick={() => handleCategorySelect('vegan')} className={`category-option ${productCategory === 'vegan' ? 'category-option-active' : ''}`}>Цагаан хоол</div>
+  <div onClick={() => handleCategorySelect('drink')} className={`category-option ${productCategory === 'drink' ? 'category-option-active' : ''}`}>Ундаа</div>
+  <div onClick={() => handleCategorySelect('vodka')} className={`category-option ${productCategory === 'vodka' ? 'category-option-active' : ''}`}>Архи</div>
+  // Add more categories as needed
+</div>
+
+
         <div className="frame-2">
           {products.length > 0 && (
             <div className="frame-3">
-               {renderedFrames}
-              {/* You can use additional Frames here, with products[1], products[2], etc. */}
+              {renderedFrames}
             </div>
           )}
-          {/* Add additional .frame-3 divs as necessary for more products */}
         </div>
+        
         <div className="frame-4">
           <Header className="header-instance" property1="variant-3" />
-          <div className="overlap-group">
-            <div className="group-2">
-              <div className="text-wrapper-4">Алтан ташуур ресторан</div>
-              <div className="tashuur-wrapper">
-                <img className="tashuur" alt="Tashuur" src="https://c.animaapp.com/kYIVtpEG/img/tashuur@2x.png" />
-              </div>
-            </div>
-          </div>
         </div>
+
         <div className="frame-5">
+          {/* Ensure PropertyDefaultWrapper also reflects a "default" design uniformly */}
           <PropertyDefaultWrapper
             className="frame-48342"
             divClassName="frame-instance"
-            property1="default" text="Зууш" />
-          <PropertyDefaultWrapper
-            className="frame-48342-instance"
-            divClassName="frame-instance"
-            property1="variant-2"
-            text="Бууз"
+            property1="default" // Maintain "default" design
+            text="Salat"
+            onClick={() => handleCategorySelect('salat')}
           />
-          <PropertyDefaultWrapper
-            className="design-component-instance-node"
-            divClassName="frame-instance"
-            property1="variant-2"
-            text="Хуушуур"
-          />
-          <PropertyDefaultWrapper
-            className="frame-6"
-            divClassName="frame-instance"
-            property1="variant-2"
-            text="Сэт хоол"
-          />
-          <PropertyDefaultWrapper className="frame-7" divClassName="frame-instance" property1="variant-2" text="Шөл" />
           <PropertyDefaultWrapper
             className="frame-48342"
             divClassName="frame-instance"
-            property1="variant-2"
-            text="Архи"
+            property1="default" // Maintain "default" design
+            text="Soup"
+            onClick={() => handleCategorySelect('food1')}
+          />
+          <PropertyDefaultWrapper
+            className="frame-48342"
+            divClassName="frame-instance"
+            property1="default" // Maintain "default" design
+            text="Meal"
+            onClick={() => handleCategorySelect('food2')}
+          />
+          <PropertyDefaultWrapper
+            className="frame-48342"
+            divClassName="frame-instance"
+            property1="default" // Maintain "default" design
+            text="Vegan"
+            onClick={() => handleCategorySelect('vegan')}
+          />
+          <PropertyDefaultWrapper
+            className="frame-48342"
+            divClassName="frame-instance"
+            property1="default" // Maintain "default" design
+            text="Drink"
+            onClick={() => handleCategorySelect('drink')}
+          />
+          <PropertyDefaultWrapper
+            className="frame-48342"
+            divClassName="frame-instance"
+            property1="default" // Maintain "default" design
+            text="Vodka"
+            onClick={() => handleCategorySelect('vodka')}
           />
         </div>
       </div>

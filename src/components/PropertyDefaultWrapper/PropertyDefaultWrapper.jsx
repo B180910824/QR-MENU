@@ -1,15 +1,17 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import PropTypes from "prop-types";
 import React from "react";
 import "./style.css";
 
-export const PropertyDefaultWrapper = ({ property1, className, text = "Elsen tasarkhai", divClassName }) => {
+export const PropertyDefaultWrapper = ({ property1, className, text = "Elsen tasarkhai", divClassName, onClick }) => {
   return (
-    <div className={`property-default-wrapper property-1-4-${property1} ${className}`}>
+    <div
+      className={`property-default-wrapper property-1-4-${property1} ${className}`}
+      onClick={onClick}
+      role="button"
+      tabIndex="0" // Make it focusable
+      onKeyPress={(e) => { if(e.key === 'Enter' || e.key === ' ') onClick(); }} // Trigger onClick on Enter or Space
+      aria-label={text} // Accessibility label
+    >
       <div className={`elsen-tasarkhai ${divClassName}`}>{text}</div>
     </div>
   );
@@ -18,4 +20,5 @@ export const PropertyDefaultWrapper = ({ property1, className, text = "Elsen tas
 PropertyDefaultWrapper.propTypes = {
   property1: PropTypes.oneOf(["variant-2", "default"]),
   text: PropTypes.string,
+  onClick: PropTypes.func,
 };
