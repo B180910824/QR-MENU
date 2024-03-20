@@ -12,7 +12,7 @@ export const Screen = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const url = `http://192.168.0.106:8000/api/product/${productCategory}`;
+      const url = `http://202.179.6.26:8000/api/product/${productCategory}`;
       try {
         const response = await fetch(url);
         if (!response.ok) {
